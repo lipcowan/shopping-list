@@ -6,7 +6,7 @@
 function addItem(item) {
     
   if(!item){
-   item = "invalid entry";        
+    item = 'invalid entry';        
   }
 
   return `<li>
@@ -25,8 +25,8 @@ function addItem(item) {
 
 
 function shoppingListMain() {
-    let formInput = $('#js-shopping-list-form input').first();
-    let shopForm = $('#js-shopping-list-form');
+  let formInput = $('#js-shopping-list-form input').first();
+  let shopForm = $('#js-shopping-list-form');
 
   //submitting new item to list
 
@@ -48,7 +48,7 @@ function shoppingListMain() {
 
   $('html').on('click','.shopping-item-toggle', function (event) {
     event.preventDefault();
-    let itemName = $($(event.target).parents('li').children()[0]);
+    let itemName = $($(this).parents('li').children()[0]);
     itemName.toggleClass('shopping-item__checked');
   });
 }
