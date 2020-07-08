@@ -54,3 +54,60 @@ function shoppingListMain() {
 }
 
 $(shoppingListMain);
+
+
+/*
+
+let listItems = [];
+
+function mainFunc() {
+
+    --- to test while developing --- renderItems(listItems);
+
+$("#submit").click(function() {
+    let item = $('#item').val();  --- this is gathing input to textbox with the ID item
+    listItems.push({name:item, completed:false});
+    console.log(item); --- this is to text the function works
+    renderItems(listItems);
+})
+
+}
+
+function renderItems(arr) {
+    let template = [];
+    for (i=0; i<arr.length; i++) {
+        template.push(createTemplate(arr[i],i));
+    }
+    console.log(template);
+    $("#list").html(template.join("")) ---- render array of html list items as string to ul tag on html page
+
+}
+
+function createTemplate(item,i) {
+    let completed = item.completed ? "completed": "";
+    return `<li data-index="${i}"> 
+    ${item.name}</li> 
+    <button class="complete"> Complete </button> 
+    <button class="delete"> Delete </button>`;
+}
+
+$("ul").on("click",".complete", function(event) {
+    event.preventDefault();
+    let index = ($(event.target).parent().data("index"));  ---- getting event target referencing the parent element to access the data attribute (array index)
+    console.log(index);
+    listItems[index].completed = true;
+    console.log($(this).text());
+    renderItems(listItems);
+});
+
+$("ul").on("click",".delete"), function(event) {
+    event.preventDefault();
+    let index = ($(event.target).parent().data("index"));
+    listItems.splice(index,1);
+    renderItems(listItems);
+
+}
+
+$(mainFunc):
+
+*/
