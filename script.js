@@ -69,6 +69,7 @@ $("#submit").click(function() {
     listItems.push({name:item, completed:false});
     console.log(item); --- this is to text the function works
     renderItems(listItems);
+    $('#item').val("");
 })
 
 }
